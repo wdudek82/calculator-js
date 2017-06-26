@@ -14,6 +14,10 @@ let seven = document.getElementById('7');
 let eight = document.getElementById('8');
 let nine = document.getElementById('9');
 
+let clear = document.getElementById('clear');
+let back = document.getElementById('back');
+
+
 zero.addEventListener('click', () => io.value += 0);
 one.addEventListener('click', () => io.value += 1);
 two.addEventListener('click', () => io.value += 2);
@@ -24,3 +28,5 @@ six.addEventListener('click', () => io.value += 6);
 seven.addEventListener('click', () => io.value += 7);
 eight.addEventListener('click', () => io.value += 8);
 nine.addEventListener('click', () => io.value += 9);
+clear.addEventListener('click', () => io.value = '');
+back.addEventListener('click', () => io.value = io.value.slice(0,-1));
