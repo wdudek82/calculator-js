@@ -1,8 +1,6 @@
 import './sass/style.sass';
 
-let state = {
-    result: document.getElementById('result'),
-};
+let result = document.getElementById('result');
 
 let zero = document.getElementById('0');
 let one = document.getElementById('1');
@@ -26,57 +24,57 @@ let dot = document.getElementById('dot');
 let equal = document.getElementById('equal');
 
 zero.addEventListener('click', () => {
-    state.result.value += 0
+    result.value += 0
 });
 one.addEventListener('click', () => {
-    state.result.value += 1
+    result.value += 1
 });
 two.addEventListener('click', () => {
-    state.result.value += 2
+    result.value += 2
 });
 three.addEventListener('click', () => {
-    state.result.value += 3
+    result.value += 3
 });
 four.addEventListener('click', () => {
-    state.result.value += 4
+    result.value += 4
 });
 five.addEventListener('click', () => {
-    state.result.value += 5
+    result.value += 5
 });
 six.addEventListener('click', () => {
-    state.result.value += 6
+    result.value += 6
 });
 seven.addEventListener('click', () => {
-    state.result.value += 7
+    result.value += 7
 });
 eight.addEventListener('click', () => {
-    state.result.value += 8
+    result.value += 8
 });
 nine.addEventListener('click', () => {
-    state.result.value += 9
+    result.value += 9
 });
 
-clear.addEventListener('click', () => state.result.value = '');
-back.addEventListener('click', () => state.result.value = state.result.value.slice(0, -1));
+clear.addEventListener('click', () => result.value = '');
+back.addEventListener('click', () => result.value = result.value.slice(0, -1));
 
 plus.addEventListener('click', () => {
-    state.result.value += '+';
+    result.value += '+';
 });
 minus.addEventListener('click', () => {
-    state.result.value += '-';
+    result.value += '-';
 });
 multiply.addEventListener('click', () => {
-    state.result.value += '*';
+    result.value += '*';
 });
 divide.addEventListener('click', () => {
-    state.result.value += '/';
+    result.value += '/';
 });
 dot.addEventListener('click', () => {
-    state.result.value += '.';
+    result.value += '.';
 });
 equal.addEventListener('click', () => {
-    state.result.value = state.result.value.replace(/^[*+-/]+|[*+-/]+$/g, '');
+    result.value = result.value.replace(/^[*+-/]+|[*+-/]+$/g, '');
 
-    state.result.value = eval(state.result.value);
-    state.result.value = state.result.value === '0' ? null : state.result.value;
+    result.value = eval(result.value);
+    result.value = result.value === '0' ? null : result.value;
 });
